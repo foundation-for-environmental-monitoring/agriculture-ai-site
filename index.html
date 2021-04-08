@@ -1,1 +1,385 @@
-<html></html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div style="width: 100%">
+      <div class="content">
+        <img src="images/logo.gif" class="logo" style="float: left" />
+        <img src="images/logo.png" style="float: right; width: 100px" />
+        <a
+          href="charts.html"
+          style="
+            padding-top: 105px;
+            margin-left: 30px;
+            font-size: 20px;
+            margin-right: 30px;
+            float: right;
+            cursor: pointer;
+          "
+        >
+          Charts
+        </a>
+        <a
+          id="budget_btn"
+          style="
+            padding-top: 105px;
+            margin-left: 30px;
+            font-size: 20px;
+            float: right;
+            cursor: pointer;
+          "
+        >
+          Recommendation
+        </a>
+
+        <a
+          href="index.html"
+          style="
+            padding-top: 105px;
+            margin-left: 30px;
+            font-size: 20px;
+            float: right;
+            cursor: pointer;
+          "
+        >
+          Home
+        </a>
+      </div>
+    </div>
+    <div style="width: 100%">
+      <div class="content">
+        <div>
+          <div
+            style="clear: both; height: 5px; background-color: #26272b"
+          ></div>
+          <img style="width: 100%" src="images/village.jpg" usemap="#markers" />
+          <map name="markers">
+            <area
+              id="borewell_btn"
+              shape="rect"
+              coords="184,204,302,326"
+              alt="Perl Tutorial"
+              target="_blank"
+            />
+            <area
+              id="tank_btn"
+              shape="rect"
+              coords="509,349,635,474" 
+              alt="HTML Tutorial"
+              target="_blank"
+            />
+            <area
+              id="moisture1_btn"
+              shape="rect"
+              coords="931,362,1069,488"
+              alt="PHP Tutorial"
+              target="_blank"
+            />
+            <area
+              id="moisture2_btn"
+              shape="rect"
+              coords="741,729,880,860"
+              alt="PHP Tutorial"
+              target="_blank"
+            />
+            <area
+              id="weather_btn"
+              shape="rect"
+              coords="175,735,330,886"
+              alt="PHP Tutorial"
+              target="_blank"
+            />
+          </map>
+        </div>
+        <br />
+        <br /><br />
+        <br /><br />
+        <br /><br />
+        <!-- Site footer -->
+        <footer class="site-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12 col-md-6">
+                <h6>About</h6>
+                <span class="text-justify">
+                  <div>Foundation for Environmental Monitoring (ffem)</div>
+                  <div>
+                    #67 (old 125), 2nd Floor, Infantry Road, Bangalore 560001,
+                    India
+                  </div>
+                  <div>info@ffem.io</div>
+                  <div>+91 80 4814 4892</div>
+                  <div>ffem.io</div>
+                </span>
+              </div>
+              <div class="col-xs-6 col-md-3"></div>
+
+              <div class="col-xs-6 col-md-3">
+                <h6>Quick Links</h6>
+                <ul class="footer-links">
+                  <li><a href="">About Us</a></li>
+                  <li>
+                    <a href="">Contact Us</a>
+                  </li>
+                  <li>
+                    <a href="charts.html">Charts</a>
+                  </li>
+                  <li>
+                    <a href="">Privacy Policy</a>
+                  </li>
+                  <li><a href="">Sitemap</a></li>
+                </ul>
+              </div>
+            </div>
+            <hr />
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8 col-sm-6 col-xs-12">
+                <span class="copyright-text">
+                  Copyright &copy; 2021
+                  <a href="#">Foundation for Environmental Monitoring</a>
+                </span>
+              </div>
+
+              <div class="col-md-4 col-sm-6 col-xs-12">
+                <ul class="social-icons">
+                  <li>
+                    <a class="facebook" href="#"
+                      ><i class="fa fa-facebook"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a class="twitter" href="#"
+                      ><i class="fa fa-twitter"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a class="dribbble" href="#"
+                      ><i class="fa fa-dribbble"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a class="linkedin" href="#"
+                      ><i class="fa fa-linkedin"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="budget" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          Recommendation
+          <span id="close1" class="close">&times;</span>
+        </div>
+        <div class="modal-body">
+          <img src="images/budget.svg" alt="" />
+          <img
+            src="images/recommended.svg"
+            style="margin-left: 2%; width: 48%"
+          />
+          <img src="images/actual.svg" style="width: 48%" />
+        </div>
+      </div>
+    </div>
+    <div id="borewell" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <span id="close2" class="close">&times;</span>
+        </div>
+        <div class="modal-body">
+          <img src="images/borewell1.svg" style="width: 48%" />
+          <img src="images/borewell2.svg" style="width: 48%" />
+          <img src="images/borewell3.svg" style="width: 48%" />
+          <img src="images/borewell4.svg" style="width: 48%" />
+        </div>
+      </div>
+    </div>
+    <div id="tank" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <span id="close3" class="close">&times;</span>
+        </div>
+        <div class="modal-body">
+          <img src="images/tank.svg" style="width: 48%" />
+          <img src="images/dugwell.svg" style="width: 48%" />
+        </div>
+      </div>
+    </div>
+
+    <div id="moisture1" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <span id="close4" class="close">&times;</span>
+        </div>
+        <div class="modal-body">
+          <img src="images/moisture11.svg" style="width: 48%" />
+          <img src="images/moisture12.svg" style="width: 48%" />
+          <img src="images/moisture13.svg" style="width: 48%" />
+          <img src="images/moisture14.svg" style="width: 48%" />
+        </div>
+      </div>
+    </div>
+
+    <div id="moisture2" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <span id="close5" class="close">&times;</span>
+        </div>
+        <div class="modal-body">
+          <img src="images/moisture21.svg" style="width: 48%" />
+          <img src="images/moisture22.svg" style="width: 48%" />
+          <img src="images/moisture23.svg" style="width: 48%" />
+        </div>
+      </div>
+    </div>
+
+    <div id="weather" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <span id="close6" class="close">&times;</span>
+        </div>
+        <div class="modal-body">
+          <img src="images/rainfall.svg" style="width: 48%" />
+          <img src="images/temperature.svg" style="width: 48%" />
+          <img src="images/humidity.svg" style="width: 48%" />
+          <img src="images/windspeed.svg" style="width: 48%" />
+        </div>
+      </div>
+    </div>
+    <script>
+      $(function () {
+        if (location.search) {
+          budget.style.display = "block";
+        }
+      });
+
+      
+      var close1 = document.getElementById("close1");
+      var budget = document.getElementById("budget");
+      var budget_btn = document.getElementById("budget_btn");
+      budget_btn.onclick = function () {
+        budget.style.display = "block";
+      };
+
+      var close2 = document.getElementById("close2");
+      var borewell = document.getElementById("borewell");
+      var borewell_btn = document.getElementById("borewell_btn");
+      borewell_btn.onclick = function () {
+        borewell.style.display = "block";
+      };
+
+      var close3 = document.getElementById("close3");
+      var tank = document.getElementById("tank");
+      var tank_btn = document.getElementById("tank_btn");
+      tank_btn.onclick = function () {
+        tank.style.display = "block";
+      };
+
+      var close4 = document.getElementById("close4");
+      var moisture1 = document.getElementById("moisture1");
+      var moisture1_btn = document.getElementById("moisture1_btn");
+      moisture1_btn.onclick = function () {
+        moisture1.style.display = "block";
+      };
+
+      var close5 = document.getElementById("close5");
+      var moisture2 = document.getElementById("moisture2");
+      var moisture2_btn = document.getElementById("moisture2_btn");
+      moisture2_btn.onclick = function () {
+        moisture2.style.display = "block";
+      };
+
+      var close6 = document.getElementById("close6");
+      var weather = document.getElementById("weather");
+      var weather_btn = document.getElementById("weather_btn");
+      weather_btn.onclick = function () {
+        weather.style.display = "block";
+      };
+
+      // When the user clicks on <span> (x), close the modal
+      close1.onclick = function () {
+        budget.style.display = "none";
+      };
+
+      close2.onclick = function () {
+        borewell.style.display = "none";
+      };
+
+      close3.onclick = function () {
+        tank.style.display = "none";
+      };
+
+      close4.onclick = function () {
+        moisture1.style.display = "none";
+      };
+
+      close5.onclick = function () {
+        moisture2.style.display = "none";
+      };
+
+      close6.onclick = function () {
+        weather.style.display = "none";
+      };
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function (event) {
+        if (event.target == budget) {
+          budget.style.display = "none";
+        }
+        if (event.target == borewell) {
+          borewell.style.display = "none";
+        }
+        if (event.target == tank) {
+          tank.style.display = "none";
+        }
+        if (event.target == moisture1) {
+          moisture1.style.display = "none";
+        }
+        if (event.target == moisture2) {
+          moisture2.style.display = "none";
+        }
+        if (event.target == weather) {
+          weather.style.display = "none";
+        }
+      };
+
+      $(document).keydown(function (event) {
+        if (event.keyCode == 27) {
+          budget.style.display = "none";
+          borewell.style.display = "none";
+          moisture1.style.display = "none";
+          moisture2.style.display = "none";
+          tank.style.display = "none";
+          weather.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>
